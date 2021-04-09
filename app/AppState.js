@@ -1,10 +1,12 @@
+import Todo from "./Models/Todo.js"
 import Value from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {Value[]} */
-  values = []
+
+
+  todoList = []
   image = {}
 }
 
