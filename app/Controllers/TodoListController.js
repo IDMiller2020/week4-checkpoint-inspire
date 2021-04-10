@@ -4,10 +4,18 @@ import { todoListService } from "../Services/todoListService.js";
 
 //Private
 function _draw() {
+  let total = 0
+  let completed = 0
   let todoList = ProxyState.todoList;
   let template = ''
-  todoList.forEach(item => template += item.Template)
-
+  todoList.forEach(item => {
+    total++
+    template += item.Template
+    if (item.completed) {
+      completed++
+    }
+  })
+  document.getElementById('count').innerText = `${completed} out of ${total} completed`
   document.getElementById('todo-list').innerHTML = /*html*/`
   <div className="card-columns values">
       ${template}
@@ -45,6 +53,13 @@ export default class TodoListController {
   async deleteTodo(id) {
     try {
       await todoListService.deleteTodo(id)
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  async checked(id) {
+    try {
+      await todoListService.checked(id)
     } catch (error) {
       console.error(error)
     }
