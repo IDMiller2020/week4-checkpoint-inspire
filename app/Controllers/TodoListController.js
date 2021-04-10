@@ -39,6 +39,8 @@ export default class TodoListController {
         description: form.description.value
       }
       await todoListService.addTodo(newTodo)
+      // @ts-ignore
+      form.reset()
     } catch (error) {
       console.error(error)
     }
