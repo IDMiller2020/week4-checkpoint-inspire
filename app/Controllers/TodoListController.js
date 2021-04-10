@@ -7,7 +7,7 @@ function _draw() {
   let todoList = ProxyState.todoList;
   let template = ''
   todoList.forEach(item => template += item.Template)
-  debugger
+
   document.getElementById('todo-list').innerHTML = /*html*/`
   <div className="card-columns values">
       ${template}
@@ -38,6 +38,13 @@ export default class TodoListController {
   async getTodoList() {
     try {
       await todoListService.getTodoList()
+    } catch (error) {
+      console.error(error)
+    }
+  }
+  async deleteTodo(id) {
+    try {
+      await todoListService.deleteTodo(id)
     } catch (error) {
       console.error(error)
     }

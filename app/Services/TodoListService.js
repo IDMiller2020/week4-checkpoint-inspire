@@ -4,13 +4,14 @@ import Value from "../Models/Value.js";
 import { sandBoxApi } from "./AxiosService.js";
 
 class TodoListService {
+  async deleteTodo(id) {
+    await sandBoxApi.delete('scott/todos/' + id)
+    ProxyState.todoList = ProxyState.todoList.filter(t => t.id !== id)
+  }
   async getTodoList() {
-    console.log('TodoListService getTodoList function');
-    console.log(`ProxyState.todoList: ${ProxyState.todoList}`)
     let res = await sandBoxApi.get('scott/todos')
-    ProxyState.todoList = res.data.map(t=> new Todo(t))
-    console.log(`res: ${res.data}`);
-    console.log(`ProxyState.todoList: ${ProxyState.todoList}`)
+    ProxyState.todoList = res.data.map(t => new Todo(t))
+    console.log(ProxyState.todoList)
   }
   async addTodo(newTodo) {
     let res = await sandBoxApi.post('scott/todos', newTodo)

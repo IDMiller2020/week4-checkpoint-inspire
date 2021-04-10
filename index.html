@@ -23,19 +23,19 @@
     </header>
     <main id="main" class="container-fluid">
         <div class="row">
-            <div class="col">
-                <div class="card text-white bg-dark mb-3" style="max-width: 20rem;">
-                    <div class="card-header">Todo List</div>
+            <div class="col pt-4">
+                <div class="card text-light bg-dark mb-3" style="max-width: 15rem;">
+                    <div class="card-header d-flex justify-content-center">To-Do List:</div>
                     <div id="todo-list"></div>
-                    <div class="card-body">
+                    <!-- <div class="card-body"> -->
                         <form class="d-flex p-2" onsubmit="app.todoListController.addTodo('${this.description}')">
-                            <input type="text" name="name" id="description" class="form-control" placeholder="New Todo"
+                            <input type="text" name="name" id="description" class="form-control text-light" placeholder="New To-Do"
                               aria-describedby="helpId" required minlength="3" maxlength="50">
                             <button type="submit" class="btn btn-success" title='add todo'><i
                                 class="fas fa-plus"></i>
                             </button>
                         </form>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
