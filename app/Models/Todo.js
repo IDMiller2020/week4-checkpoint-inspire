@@ -1,4 +1,3 @@
-import { generateId } from "../Utils/GenerateId.js"
 export default class Todo {
   constructor(data) {
       this.completed = data.completed
