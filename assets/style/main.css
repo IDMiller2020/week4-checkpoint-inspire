@@ -10693,6 +10693,7 @@ body {
 
 main {
   flex-grow: 1;
+  background-size: cover;
 }
 .middle {
   flex-grow: 1;
@@ -10723,10 +10724,19 @@ main {
 
 #temperature {
   text-shadow: #000000 1px 1px 5px;
+  cursor: pointer;
 }
 
 #quote-text {
   text-shadow: #000000 1px 1px 2px;
+}
+
+#checkbox {
+  cursor: pointer;
+}
+
+#x-delete {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

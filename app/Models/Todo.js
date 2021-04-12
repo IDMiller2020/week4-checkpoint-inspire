@@ -9,17 +9,17 @@ export default class Todo {
     if (this.completed) {
       return /*html*/`
       <div class="m-4 d-flex align-items-center">
-          <input class="mr-2" type="checkbox" aria-label="Checkbox" ${this.completed} onclick="app.todoListController.checked('${this.id}')" checked>
+          <input id="checkbox" class="mr-2" type="checkbox" aria-label="Checkbox" ${this.completed} onclick="app.todoListController.checked('${this.id}')" checked>
           <p class="m-0">${this.description}</p>
-          <i class="fas fa-times ml-2 text-danger" onclick="app.todoListController.deleteTodo('${this.id}')"></i>
+          <i id="x-delete" class="fas fa-times ml-2 text-danger" onclick="app.todoListController.deleteTodo('${this.id}')"></i>
       </div>
       `
     } else {
         return /*html*/`
         <div class="m-4 d-flex align-items-center">
-            <input class="mr-2" type="checkbox" aria-label="Checkbox" ${this.completed} onclick="app.todoListController.checked('${this.id}')">
+            <input id="checkbox" class="mr-2" type="checkbox" aria-label="Checkbox" ${this.completed} onclick="app.todoListController.checked('${this.id}')">
             <p class="m-0">${this.description}</p>
-            <i class="fas fa-times ml-2 text-danger" onclick="app.todoListController.deleteTodo('${this.id}')"></i>
+            <i id="x-delete" class="fas fa-times ml-2 text-danger" onclick="app.todoListController.deleteTodo('${this.id}')"></i>
         </div>
         `
     }
