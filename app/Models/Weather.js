@@ -4,7 +4,7 @@ export default class Weather {
       this.temperatureC = (data.main.temp - 273.15).toFixed(1)
       this.temperatureF = ((data.main.temp - 273.15) * 9/5 + 32).toFixed(1)
       this.displayUnits = 'F'
-      this.weatherIcon = data.weather[0].icon
+      this.weatherIcon = data.weather[0].icon  //NOTE This gives me the number for the icon but I don't know how to get the icon.
   }
 
   get Template() {

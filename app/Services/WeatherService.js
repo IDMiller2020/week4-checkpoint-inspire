@@ -3,7 +3,7 @@ import Weather from "../Models/Weather.js";
 import { sandBoxApi } from "./AxiosService.js";
 
 class WeatherService {
-  async getIcon(icon) {
+  async getIcon(icon) {  // FIXME Don't know how to get the weather icon.
     console.log(icon)
     let res = await sandBoxApi.get('weather/' + icon)
     console.log(res)

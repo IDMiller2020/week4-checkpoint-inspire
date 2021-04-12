@@ -16,6 +16,7 @@ export default class WeatherController {
     this.getWeather()
   }
   async getWeather() {
+    // FIXME Need help with figuring out how to get the weather icon.
     try {
       await weatherService.getWeather()
       await weatherService.getIcon(ProxyState.weather.weatherIcon)
