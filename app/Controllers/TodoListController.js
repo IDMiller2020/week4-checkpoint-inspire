@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { todoListService } from "../Services/todoListService.js";
+import { todoListService } from "../Services/TodoListService.js";
 
 
 //Private
