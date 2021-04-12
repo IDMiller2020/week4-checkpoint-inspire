@@ -4,7 +4,7 @@ export default class Clock {
   }
   get Template() {
     return `
-    <h1 class="text-light my-5">${this.time}</h1>
+    <h1 id="time" class="text-light my-5">${this.time}</h1>
     `
   }
 }

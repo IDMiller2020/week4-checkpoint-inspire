@@ -10,13 +10,13 @@ export default class Weather {
   get Template() {
     if (this.displayUnits === 'F') {
       return /*html*/`
-      <h3 class="mt-4 d-flex justify-content-center" onclick="app.weatherController.changeUnits()">
+      <h3 id="temperature" class="mt-4 d-flex justify-content-center" onclick="app.weatherController.changeUnits()">
           ${this.temperatureF} F
       </h3>
       `
     } else {
       return /*html*/`
-      <h3 class="mt-4 d-flex justify-content-center" onclick="app.weatherController.changeUnits()">
+      <h3 id="temperature" class="mt-4 d-flex justify-content-center" onclick="app.weatherController.changeUnits()">
           ${this.temperatureC} C
       </h3>
       `

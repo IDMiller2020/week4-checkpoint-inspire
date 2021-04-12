@@ -5,7 +5,7 @@ export default class Quote {
   }
   get Template() {
     return `
-    <p>${this.quote}</p>
+    <p id="quote-text">${this.quote}</p>
     <div class="author">
       <p>${this.author}</p>
     </div>
